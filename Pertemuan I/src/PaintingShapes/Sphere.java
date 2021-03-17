@@ -27,9 +27,11 @@ public class Sphere extends Shape
         super("Sphere");
         radius = r;
     }
+    
     //-----------------------------------------
     // Returns the surface area of the sphere.
     //-----------------------------------------
+    @Override
     public double area()
     {
     return 4*Math.PI*radius*radius;
@@ -38,6 +40,7 @@ public class Sphere extends Shape
     //-----------------------------------
     // Returns the sphere as a String.
     //-----------------------------------
+    @Override
     public String toString()
     {
         return super.toString() + " of radius " + radius;
