@@ -7,7 +7,7 @@ package AnotherTypeOfEmployee;
 
 /**
  *
- * @author Anthon Salusu
+ * @author Johan Salusu
  */
 
 //********************************************************************
@@ -15,20 +15,24 @@ package AnotherTypeOfEmployee;
 //
 // ....
 //********************************************************************
-public class Commission extends Hourly {
+public class Commission extends Hourly
+{
     private double totalSales; 
     private double commissionRate;
     
-    public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double rate, double comrate){
+    public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double rate, double comrate)
+    {
         super(eName, eAddress, ePhone, socSecNumber, rate);
         commissionRate = comrate;
         totalSales = 0;
     }
-    public void addSales(double newtotalSales){
+    public void addSales(double newtotalSales)
+    {
         totalSales += newtotalSales;
     }
     @Override
-    public double pay(){
+    public double pay()
+    {
         totalSales = totalSales*commissionRate;
         totalSales = totalSales + super.pay(); 
         double myPay = totalSales;
@@ -36,7 +40,8 @@ public class Commission extends Hourly {
         return myPay;
     }
     @Override
-    public String toString(){
+    public String toString()
+    {
         String result = super.toString();
         result += "\nTotal Sales: "+ totalSales;
         return result;
