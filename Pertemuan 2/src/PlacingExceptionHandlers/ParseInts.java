@@ -26,7 +26,7 @@ public class ParseInts
         Scanner scan = new Scanner(System.in);
         String line;
         
-        System.out.println("Enter a line of text");
+        System.out.println("Enter a line of text!");
         Scanner scanLine = new Scanner(scan.nextLine());
         
         while (scanLine.hasNext())
@@ -40,6 +40,6 @@ public class ParseInts
                 {
                 }
             }
-        System.out.println("The sum of the integers on this line is " + sum);
+        System.out.println("The sum of the integers on this line is " + sum + ".");
     }
 }
